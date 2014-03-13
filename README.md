@@ -6,6 +6,7 @@ Small project to get started with ember js
 ### Status
 
   Under development
+  * Visit: http://gntics.github.io/ember-weather/
 
 ### API
 
