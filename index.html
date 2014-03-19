@@ -52,7 +52,7 @@
             </div>
           </header>
 
-          <section id="home-map-wrapper" {{bind-attr class="displayMap"}}>
+          <section id="home-map-wrapper">
             <div class="row">
               <div id="home-map" class="box">
                 <img src="img/map-blank.png" class="img-responsive">
@@ -132,26 +132,29 @@
         </div>
       </div>
 
-      <div id="forecast" class="row">
-        {{#each day in forecast}}
-          {{#with day}}
-            <div class="col-md-2 frcst">
-              <div class="unit box">
-                {{format-date dt}}<br/>
-                {{format-temp temp.min}}°C/{{format-temp temp.max}}°C
-                <div class="row">
-                  <div class="col-md-12">
-                    {{#each w in weather}}
-                      {{ iconW w.icon }}
-                    {{/each}}
-                  </div>
-                </div>
-              </div>
-            </div>
-          {{/with}}
-        {{/each}}
+      <div id="forecast-wrapper" class="row">
+        {{view App.ForecastView contentBinding="forecast"}}
       </div>
+
     </section>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="forecast">
+    {{#each view.contentWithClassName}}
+      <div {{bindAttr class="classNameParent"}}>
+        <div {{bindAttr class="className"}}>
+          {{format-date day.dt}}<br/>
+          {{format-temp day.temp.min}}°C/{{format-temp day.temp.max}}°C
+          <div class="row">
+            <div class="col-md-12">
+              {{#each w in day.weather}}
+                {{ iconW w.icon }}
+              {{/each}}
+            </div>
+          </div>
+        </div>
+      </div>
+    {{/each}}
   </script>
 
   <script src="js/libs/handlebars-1.0.0.js"></script>

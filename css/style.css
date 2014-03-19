@@ -201,14 +201,22 @@ section#home-map-wrapper{
   font-weight: 400;
 }
 
-#forecast{
+#forecast-wrapper{
   margin-top: 1em;
   color: white;
 }
 
-.frcst{
+.forecast{
   padding: 5px;
   text-align: center;
+}
+
+.forecast-0{
+  padding-left: 0px;
+}
+
+.forecast-5{
+  padding-right: 0px;
 }
 
 .unit{
@@ -217,6 +225,30 @@ section#home-map-wrapper{
 
 .unit i{
   font-size: 2em;
+}
+
+.frcst-0{
+  background-color: #1ABC9C;
+}
+
+.frcst-1{
+  background-color: #E67E22;
+}
+
+.frcst-2{
+  background-color: #F1C40F;
+}
+
+.frcst-3{
+  background-color: #3498DB;
+}
+
+.frcst-4{
+  background-color: #9B59B6;
+}
+
+.frcst-5{
+  background-color: #2ECC71;
 }
 
 div#api-ref-wrapper{

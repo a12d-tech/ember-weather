@@ -6,13 +6,9 @@ App.Router.map(function() {
 
 App.ApplicationController = Ember.Controller.extend({
   cityName: '',
-  displayMap: '',
   actions: {
     searchWeather: function() {
       var cityName = this.get('cityName');
-
-      this.set('displayMap', 'hidden');
-
       this.transitionToRoute('city', cityName );
     }
   },
@@ -46,6 +42,21 @@ App.GoogleMapComponent = Ember.Component.extend({
         latitude = this.get('lat');
     return 'http://maps.googleapis.com/maps/api/staticmap?center=' + latitude + ',' + longitude + '&zoom=12&size=341x300&sensor=true';
   }.property('lng', 'lat')
+});
+
+App.CityView = Ember.View.extend({
+  didInsertElement: function() {
+    $('#home-map-wrapper').addClass('hidden');
+  }
+});
+
+App.ForecastView = Ember.View.extend({
+  templateName: 'forecast',
+  contentWithClassName: function() {
+      return this.get('content').map(function(item, index) {
+        return {day: item, classNameParent: "col-md-2 forecast forecast-" + index, className: "unit box frcst-" + index};
+      });
+    }.property('content.@each')
 });
 
 Ember.Handlebars.helper('format-date', function(date) {
@@ -86,35 +97,4 @@ Ember.Handlebars.helper('iconW', function(icon) {
     "50n": "<i class='wi-fog'></i>"
   };
   return new Handlebars.SafeString(iconMap[icon]);
-});
-
-App.CityView = Ember.View.extend({
-  didInsertElement: function() {
-    $('#home-map-wrapper').css('display','none');
-
-    $('.unit.box').each(function(index) {
-      switch(index){
-        case 0:
-          $(this).css("background-color",'#1ABC9C');
-          $(this).parent().css("padding-left",'0px');
-          break;
-        case 1:
-          $(this).css("background-color",'#E67E22');
-          break;
-        case 2:
-          $(this).css("background-color",'#F1C40F');
-          break;
-        case 3:
-          $(this).css("background-color",'#3498DB');
-          break;
-        case 4:
-          $(this).css("background-color",'#9B59B6');
-          break;
-        case 5:
-          $(this).css("background-color",'#2ECC71');
-          $(this).parent().css("padding-right",'0px');
-          break;
-      }
-    });
-  }
 });
