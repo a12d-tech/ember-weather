@@ -1,1 +1,7 @@
-json_api_response.txt
+node_modules
+temp
+dist
+.sass-cache
+.tmp
+app/bower_components
+test/bower_components

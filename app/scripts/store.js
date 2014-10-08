@@ -1,0 +1,1 @@
+EmberWeather.ApplicationAdapter = DS.FixtureAdapter;
