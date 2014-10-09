@@ -1,5 +1,19 @@
-<div>
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<div id="main-container">
+  <div class="container" id="main">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        {{partial "search"}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        {{outlet}}
+      </div>
+    </div>
+  </div>
+</div>
+
+{{!--   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -11,24 +25,15 @@
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
         </div>
-    </nav>
-    <div class="container" id="main">
-        <div class="row">
-            <div>
-                <div class="col-md-3">
-                    <div class="well sidebar-nav">
-                        <strong>Colors</strong>
-                        <ul class="list-group">
-                        {{#each item in controller}}
-                            <li class="list-group-item">{{item}}</li>
-                        {{/each}}
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-9">
-                    {{outlet}}
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+    </nav> --}}
+
+{{!-- <div class="col-md-3">
+          <div class="well sidebar-nav">
+            <strong>Colors</strong>
+            <ul class="list-group">
+              {{#each item in controller}}
+                <li class="list-group-item">{{item}}</li>
+              {{/each}}
+            </ul>
+          </div>
+        </div> --}}

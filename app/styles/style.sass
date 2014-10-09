@@ -1,0 +1,121 @@
+$icon-font-path: "../styles/fonts/" // Change the path to the fonts
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap"
+
+/* Put your CSS here */
+html, body
+  // margin: 30px 0
+
+html
+  background: url(../images/landscape.jpg) no-repeat center center fixed 
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+
+body
+  background-color: transparent
+  color: #686563
+  font-family: 'Lato', Helvetica, Arial, sans-serif
+  font-weight: 300
+
+.box
+  -webkit-box-shadow: 0 0 5px #888
+  -moz-box-shadow: 0 0 5px #888
+  -o-box-shadow: 0 0 5px #888
+  box-shadow: 0 0 5px #888
+
+a, a:visited
+  text-decoration: none
+a:hover
+  text-decoration: underline
+
+ul
+  list-style-type: none
+
+// Content
+#main-container
+  margin-top: 7em
+  font-size: 1em
+
+  // Header
+  header
+    #current-date
+      background-color: #01CDE6
+      height: 75px
+      color: white
+
+      #d
+        text-align: center
+
+      #d span
+        font-size: 4em
+        position: relative
+        top: -3px
+
+      #m-y
+        padding-left: 0px
+
+      #m
+        position: relative
+        top: 13px
+        font-size: 1.5em
+
+      #y
+        font-size: 1.8em
+        position: relative
+        top: 1px
+
+    #search-icon, #search, #launch-search
+      background-color: #EAEAE9
+      height: 75px
+
+    #search-icon i
+      margin-top: 23px
+
+    #launch-search i
+      margin-top: 26px
+
+    #search input, #search input:focus
+      height: 39px
+      margin-top: 18px
+      border: none
+      box-shadow: none
+      -webkit-box-shadow: none
+      -moz-box-shadow: none
+      -o-box-shadow: none
+      background-color: transparent
+
+  // Map
+  section#home-map-wrapper
+    #home-map
+      height: 350px
+      background-color: #293539
+      opacity: 0.86
+      padding: 15px
+      padding-top: 37px
+
+      i
+        color: #E74C3C
+        opacity: 0.86
+        cursor: pointer
+        position: relative
+
+      #paris
+        top: -193px
+        left: 260px
+
+      #sf
+        top: -175px
+        left: 55px
+
+      #rio
+        top: -77px
+        left: 167px
+
+      #tokyo
+        top: -169px
+        left: 436px
+
+      #sydney
+        top: -54px
+        left: 444px
