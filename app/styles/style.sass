@@ -32,6 +32,11 @@ a:hover
 ul
   list-style-type: none
 
+// Modules
+.bg-grey
+  background-color: #293539
+  opacity: 0.86
+
 // Content
 #main-container
   margin-top: 7em
@@ -89,8 +94,6 @@ ul
   section#home-map-wrapper
     #home-map
       height: 350px
-      background-color: #293539
-      opacity: 0.86
       padding: 15px
       padding-top: 37px
 
@@ -119,3 +122,16 @@ ul
       #sydney
         top: -54px
         left: 444px
+
+  #cities
+    h1
+      border-bottom: 1px solid grey
+    #cities-list
+      .city-suggestion
+        label:hover
+          // add animation on border
+          padding-left: 10px
+          cursor: pointer
+          color: #01CDE6
+          border-left: 5px solid #01CDE6
+
