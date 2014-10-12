@@ -1,0 +1,18 @@
+<div id="cities">
+  <div class="row bg-grey">
+    <div class="col-md-12">
+
+      <h1>Searched cities</h1>
+      <div id="cities-list">
+        <ul>
+          {{#each itemController="city"}}
+            <li class="city-suggestion">
+              <label {{action "createCity" on="click"}} >{{formatted_address}}</label>
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
