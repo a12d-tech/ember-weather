@@ -1,0 +1,15 @@
+{{#each view.contentWithClassName}}
+  <div {{bind-attr class="classNameParent"}}>
+    <div {{bind-attr class="className"}}>
+      {{format-date day.dt}}<br/>
+      {{format-temp day.temp.min}}°C/{{format-temp day.temp.max}}°C
+      <div class="row">
+        <div class="col-md-12">
+          {{#each w in day.weather}}
+            {{ iconW w.icon }}
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+{{/each}}

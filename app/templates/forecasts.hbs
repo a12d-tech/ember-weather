@@ -2,7 +2,7 @@
 
 {{!-- {{tutu}} --}}
 
-<div id="forecasts_wrapper" class="row box">
+<div id="today-forecasts-wrapper" class="row box">
   <div id="map" class="col-md-7">
     {{google-map lng=city.coord.lon lat=city.coord.lat}}
   </div>
@@ -51,7 +51,6 @@
   </div>
 </div>
 
-{{!-- <div id="forecast-wrapper" class="row">
-  {{view App.ForecastView contentBinding="forecast"}}
+<div id="future-forecasts-wrapper" class="row">
+  {{view EmberWeather.ForecastView contentBinding="forecast"}}
 </div>
- --}}
