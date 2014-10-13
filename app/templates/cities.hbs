@@ -1,8 +1,22 @@
 {{!-- rendered in application.hbs --}}
-<ul>
-  {{#each}}
-    <li>
-      <label>{{formatted_location}}</label>
-    </li>
-  {{/each}}
-</ul>
+
+<div id="cities">
+  <div class="row bg-grey">
+    <div class="col-md-12">
+      <h1>Previous searches</h1>
+      <div id="cities-list">
+        <ul>
+          {{#each city in controller}}
+            <li class="city-suggestion">
+              <label>
+                {{#link-to 'forecasts' city}}
+                  {{city.formatted_location}}
+                {{/link-to}}
+              </label>
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
