@@ -228,3 +228,54 @@ ul
 
     .frcst-5
       background-color: #2ECC71
+
+#error-wrapper
+  margin-top: 3em
+  text-align: center
+  color: red
+
+#loader-wrapper
+  margin-top: 3em
+  #loader
+    margin: 0 auto
+    height: 50px
+    width: 50px
+    -webkit-border-radius: 100%
+    -moz-border-radius: 100%
+    -o-border-radius: 100%
+    border-radius: 100%
+    border-top: 2px solid white
+    border-right: 2px solid white
+    border-bottom: 2px solid white
+    -webkit-animation: infinite-spinning 0.7s infinite
+    -moz-animation:    infinite-spinning 0.7s infinite
+    -o-animation:      infinite-spinning 0.7s infinite
+    animation:         infinite-spinning 0.7s infinite
+    -webkit-animation-timing-function: linear
+    -moz-animation-timing-function: linear
+    -o-animation-timing-function: linear
+    animation-timing-function: linear
+
+@-webkit-keyframes infinite-spinning
+  from
+    transform: rotate(0deg)
+  to
+    transform: rotate(360deg)
+
+@-moz-keyframes infinite-spinning
+  from
+    transform: rotate(0deg)
+  to
+    transform: rotate(360deg)
+
+@-o-keyframes infinite-spinning
+  from
+    transform: rotate(0deg)
+  to
+    transform: rotate(360deg)
+
+@keyframes infinite-spinning
+  from
+    transform: rotate(0deg)
+  to
+    transform: rotate(360deg)
