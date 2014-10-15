@@ -4,7 +4,7 @@
   <div class="row bg-grey">
     <div class="col-md-12">
       {{#if controller.length}}
-        <h1>Previous searches</h1>
+        <h3>Search history</h3>
         <div id="cities-list">
           <ul>
             {{#each city in controller}}
@@ -19,7 +19,7 @@
           </ul>
         </div>
       {{else}}
-        <h1>No search history...</h1>
+        <h3>No search history...</h3>
       {{/if}}
     </div>
   </div>
