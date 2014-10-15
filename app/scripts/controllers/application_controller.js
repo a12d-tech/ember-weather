@@ -4,6 +4,7 @@ EmberWeather.ApplicationController = Ember.Controller.extend({
     search: function() {
       var cityName = this.get('cityName');
       this.transitionToRoute('search', cityName );
+      this.set('cityName','');
     }
   }
 });
